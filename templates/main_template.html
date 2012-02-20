@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es">
+
+<head>
+	<!--script type="text/javascript" src="http://use.typekit.com/edk2fuu.js"></script-->
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+	<link rel="stylesheet/less" href="/css/less/bootstrap/bootstrap.less">
+	<link rel="stylesheet/less" href="/css/less/bootstrap/ataxic.less">
+	
+	<script src="/js/less-1.1.5.min.js"></script>
+	<link href="/css/prettify.css" type="text/css" rel="stylesheet" />
+	<!--Docs has the Jumbotron CSS Style info-->
+	<link href="/css/docs.css" type="text/css" rel="stylesheet" />
+	<script type="text/javascript" src="/js/prettify/prettify.js"></script>
+	{% block css_requires %}{% endblock css_requires %}
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8" />
+	<script type="text/javascript">
+
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-24981593-1']);
+		  _gaq.push(['_trackPageview']);
+
+		  (function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+
+	</script>
+	
+</head>
+<body style="padding-top: 40px;" onload="prettyPrint()">
+	 <div class="topbar" id="topbar" data-scrollspy="scrollspy" data-dropdown="dropdown" > 
+      <div class="topbar-inner"> 
+        <div class="container"> 
+          <a class="brand" href="/">Ataxic{%block brand_extra%}{%endblock%}</a> 
+          {% block menu_content %}
+          <ul class="nav"> 
+            <li><a href="/news/">Noticias</a></li> 
+            <li><a href="/links/">Links</a></li> 
+            <li><a href="/posts/">Artículos</a></li> 
+            <li><a href="/about/">Miembros</a></li> 
+          </ul>
+          {% endblock %}
+          <ul class="nav secondary-nav">
+          	{%if login_url %}
+            <li><a href="{{login_url}}">Entrar</a></li>
+            {% endif %}
+		  	{%if logged_user %}
+		  	<li class="dropdown">
+			  	<a class="dropdown-toggle">{{logged_user.email}}</a>
+			  	<ul class="dropdown-menu">
+			  		<li><a href="/admin/">Panel de control</a></li>
+			  		<li class="divider"></li>
+			  		<li><a href="/logout/">Salir</a></li>
+		  		</ul>
+		  	</li>
+		  	{% endif %}
+          </ul>
+        </div> 
+      </div> 
+    </div> 
+    {% block header%}
+    {% endblock header%}
+    <div class="container" style="padding-top: 5px">
+		<div class="content"> 
+		 	{% if flash %}
+		 	<div id="flashContainer" class="row">
+		 		<div class="alert-message {{flash_type}}">{{flash}}</div>
+		 	</div>
+		 	{%endif%}
+		    <div class="row"> 
+		      	<div class="span16"> 
+					{% block content %}
+					{% endblock content %}
+		      	</div> 
+		    </div> 
+	    </div> 
+	</div>
+    <footer class="footer"> 
+    	<div class="row">
+	    	<div class="span3 offset7">
+	        	<h4>&copy; Ataxic 2011</h4> 
+	        </div>
+        </div>
+    </footer> 
+</body>
+<script type="text/javascript" src="/js/mootools-core-1.3.1-full-compat.js"></script>
+<script type="text/javascript" src="/js/mootools-more-1.3.1.1.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="/js/bootstrap/bootstrap-dropdown.js"></script>
+{% block js_requires%}{%endblock js_requires%}
+{% block js_activities%}{%endblock js_activities%}
+<script type="text/javascript"> 
+	
+	
+</script> 
+</html>	
+	

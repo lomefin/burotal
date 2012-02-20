@@ -1,0 +1,130 @@
+body
+{
+	color: black;
+	background:  white;
+	font-family: minion-pro,sans-serif;
+
+}
+a
+{
+	text-decoration: none;
+	font-weight: bold;
+}
+	a:visited{color: #5555aa;}
+	a:link{color:#5555aa;}
+#mainContainer
+{
+	background-color: white;
+	opacity: 0.9;
+	min-height:500px;
+}
+	#mainContainer h1,h2,h3
+	{
+		text-shadow: 2px 2px 3px #ccc;
+		  font-family: proxima-nova,sans-serif;
+		line-height:1.5em;
+	}
+	#mainContainer p
+	{
+		margin-top: 0px;
+		letter-spacing: 0px;
+	}
+#menuContainer
+{
+	/*background-color: #262626;*/
+	background-color: black;
+	color: white;
+	text-align: left;
+	font-family: quatro,sans-serif;
+	font-style: normal;
+	font-weight: 900;
+	display: block;
+}	
+	#menuContainer div {display: inline;}
+	#menuContainer span
+	{
+	}
+	#menuContainer span:hover
+	{
+		color: white;
+	}
+	#menuContainer a
+	{
+		font-size: 14pt;
+		font-weight: normal;
+		color: #ccc;
+	}
+	#menuContainer a:hover { color: white; }
+#flashContainer
+{
+	text-align:center;
+	border-radius: 3px;
+}
+	.normalFlash{	background-color: #5555aa;}
+	.successFlash {	background-color: #55aa55;}
+	.errorFlash{	background-color: #aa5555;}
+#headerContainer
+{
+	
+	display: block;
+	font-size: 22pt;
+	
+	text-shadow: #ccf 0px;
+	
+	font-style: italic;
+	font-weight: medium;
+}
+  #headerLeonardo { color:#cccccc; }
+  #headerLuarteNet {color:#5555aa;}
+  #headerContainer span
+  {
+    line-height:20px;
+  }
+  #headerContainer span:hover
+  {
+      background-color: transparent;
+  }
+.textContent
+{
+	
+}
+#bodyContainer
+{
+	opacity: 1 !important;
+}
+#bodyContainer p
+{
+  margin-bottom: 1em;
+}
+.memberBio
+{
+ 
+}
+#footerContainer
+{
+	text-align:center;
+}
+#footerContainer .last
+{
+    font-size: 40px;
+    color: rgba(0,0,0,0.2);
+    font-family: quatro,sans-serif;
+    font-style: normal;
+    font-weight: 900;
+}
+pre
+{
+	padding: 1em;
+	background-color: black;
+	color: white;
+}
+.bottomSeparator
+{
+	border-top: 1px solid #5555aa;
+}
+#about
+{
+  border: thin solid black;
+  background-color: rgb(250,250,240);
+}
+#about p {padding: 1em;}
